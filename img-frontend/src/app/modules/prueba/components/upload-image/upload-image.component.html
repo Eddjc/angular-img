@@ -1,0 +1,11 @@
+<ngx-dropzone  (change)="onSelect($event)">
+    
+	<ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files"  [file]="f" [removable]="true" (removed)="onRemove(f)">
+        <ngx-dropzone-label>({{ f.type }})</ngx-dropzone-label>
+      </ngx-dropzone-image-preview>
+</ngx-dropzone>
+
+<div>
+    <button (click)="upLoad()" class="btn btn-primary" >Guardar</button>
+</div>
+
